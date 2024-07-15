@@ -15,7 +15,7 @@ function save() {
     count = 0;
 }
 
-function clearel() {
+function cleared() {
     saveel.innerText = "Previous entries:";
     countel.innerText = 0;
     count = 0;
