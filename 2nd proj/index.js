@@ -1,11 +1,12 @@
-let my_cards = []
-let sum = 0
-let hasBlackJack = false
-let game = false
-let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
+
+let my_cards = []
+let sum = 0
+let has_blackjack = false
+let game = false
+let message = ""
 
 function startGame() {
     game = true
@@ -49,7 +50,7 @@ function renderGame() {
     else if (sum === 21) 
     {
         message = "You've got Blackjack!"
-        hasBlackJack = true
+        has_blackjack = true
     } 
     else 
     {
