@@ -1,7 +1,8 @@
-let myLeads = []
 const inputEl = document.getElementById("input-el")
 const ulEl = document.getElementById("ul-el")
 const inputBtn = document.getElementById("input-btn")
+
+let myLeads = []
 
 
 inputBtn.addEventListener("click", function() {
@@ -14,7 +15,7 @@ inputBtn.addEventListener("click", function() {
 function render_my_own_leads() 
 {
     let myListItems = ""
-    for (let i = 0; i < myLeads.length; i++) 
+    for (let i = 0; i < myLeads.length;i++) 
         {
             myListItems += `
                 <li>
@@ -22,7 +23,7 @@ function render_my_own_leads()
                         ${myLeads[i]}
                     </a>
                 </li>
-            `
+                `
         }
     ulEl.innerHTML = myListItems  
 }
