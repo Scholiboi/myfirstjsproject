@@ -2,6 +2,7 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 let buttonEl = document.getElementById("button-el")
+let playerEL = document.getElementById("player-el")
 
 let my_cards = []
 let sum = 0
@@ -9,6 +10,13 @@ let has_blackjack = false
 let game = false
 let message = ""
 
+buttonEl.style.display = "none"
+
+let player = {
+    name: "Per",
+    chips: 145
+}
+playerEL.textContent = player.name + ": $" + player.chips
 
 function startGame() {
     buttonEl.style.display = "inline"
