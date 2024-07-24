@@ -1,6 +1,7 @@
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
+let buttonEl = document.getElementById("button-el")
 
 let my_cards = []
 let sum = 0
@@ -8,7 +9,9 @@ let has_blackjack = false
 let game = false
 let message = ""
 
+
 function startGame() {
+    buttonEl.style.display = "inline"
     game = true
     let p_first_card = pickRandomCard()
     let p_second_card = pickRandomCard()
@@ -62,8 +65,13 @@ function renderGame() {
 
 
 function newCard() {
+    if (sum <= 21){
     let card = pickRandomCard()
     sum += card
     my_cards.push(card)
     renderGame()
+    }
+    else{
+        buttonEl.style.display = "none"
+    }
 }
